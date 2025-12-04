@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from model import load_prediction_model, load_scaler, make_prediction
+from prediction_helper import load_prediction_model, load_scaler, make_prediction
 
 # --- Page Config ---
 st.set_page_config(
