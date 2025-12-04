@@ -3,7 +3,9 @@ import joblib
 from tensorflow.keras.models import load_model
 
 def load_prediction_model(model_path):
-    return load_model(model_path)
+    # compile=False fixes the optimizer error by skipping the training configuration.
+    # We don't need the optimizer for inference (prediction).
+    return load_model(model_path, compile=False)
 
 def load_scaler(scaler_path):
     return joblib.load(scaler_path)
